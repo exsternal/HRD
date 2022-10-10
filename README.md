@@ -36,7 +36,8 @@ Steps:
 
      singularity build --sandbox hrd_v1.13_sandbox docker-daemon://hrd:1.13
 
-10)  build container from sandbox
+10)  build container from sandbox:
+     
      singularity build hrd_v1.13.sif hrd_v1.13_sandbox
 
 # Execution:
