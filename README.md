@@ -40,12 +40,15 @@ Steps:
      
      singularity build hrd_v1.13.sif hrd_v1.13_sandbox
 
-# Execution:
-singularity exec --bind /mnt/data/QDNAseq/:/data hrd_v1.13.sif /home/shallowHRD/shallowHRD_hg19_1.13_QDNAseq_chrX_noM.R           /data/HG004_35x_sort.bam_ratio.txt /data /data/cytoband_adapted_hg19.csv  > log 2>&1 &
 
 # Inputs:
-Input is the bam_ratio output from QDNASeq: HG004_35x_sort.bam_ratio.txt (attached above)
+
+Input is the bam_ratio output from QDNASeq: HG004_35x_sort.bam_ratio.txt (attached above) (Note: Check QDNASeq repo for the step to obtain the bam_ratio file)
+
 Supporting input: cytoband_adapted_hg19.csv (attached above)
+
+# Execution:
+singularity exec --bind /mnt/data/QDNAseq/:/data hrd_v1.13.sif /home/shallowHRD/shallowHRD_hg19_1.13_QDNAseq_chrX_noM.R           /data/HG004_35x_sort.bam_ratio.txt /data /data/cytoband_adapted_hg19.csv  > log 2>&1 &
 
 # Outputs(tarred):
 output.tar.gz contains:
